@@ -62,7 +62,9 @@ model    | mAP |
 * Torchvision 0.4.0+ (**We need high version because Torchvision support nms now.**)
 * requirements.txt 
 ## Datasets
-To make things easy, we provide bash scripts to handle the dataset downloads and setup for you.  We also provide simple dataset loaders that inherit `torch.utils.data.Dataset`, making them fully compatible with the `torchvision.datasets` [API](http://pytorch.org/docs/torchvision/datasets.html).
+To make things easy, we provide bash scripts to handle the dataset downloads and setup for you.  
+We also provide simple dataset loaders that inherit `torch.utils.data.Dataset`, 
+making them fully compatible with the `torchvision.datasets` [API](http://pytorch.org/docs/torchvision/datasets.html).
 
 ### VOC Dataset
 PASCAL VOC: Visual Object Classes

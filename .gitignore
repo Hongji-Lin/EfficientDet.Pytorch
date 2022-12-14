@@ -114,4 +114,6 @@ venv.bak/
 
 saved/
 weights/
-val2017_bbox_results.json
+val2017_bbox_results.json!/data/
+/data/
+/.idea/
