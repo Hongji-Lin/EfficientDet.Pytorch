@@ -34,24 +34,24 @@ from utils import EFFICIENTDET, get_state_dict
 from eval import evaluate, evaluate_coco
 
 parser = argparse.ArgumentParser(description='PyTorch ImageNet Training')
-parser.add_argument('--dataset', default='VOC', choices=['VOC', 'COCO'],
+parser.add_argument('--dataset', default='COCO', choices=['VOC', 'COCO'],
                     type=str, help='VOC or COCO')
-parser.add_argument(
-    '--dataset_root',
-    default='/root/data/VOCdevkit/',
-    help='Dataset root directory path [/root/data/VOCdevkit/, /root/data/coco/]')
+
+parser.add_argument('--dataset_root', default='/root/data/coco/',
+                    help='Dataset root directory path [/root/data/VOCdevkit/, /root/data/coco/]')
+
 parser.add_argument('--network', default='efficientdet-d0', type=str,
                     help='efficientdet-[d0, d1, ..]')
 
 parser.add_argument('--resume', default=None, type=str,
                     help='Checkpoint state_dict file to resume training from')
-parser.add_argument('--num_epoch', default=500, type=int,
+parser.add_argument('--num_epoch', default=100, type=int,
                     help='Num epoch for training')
 parser.add_argument('--batch_size', default=32, type=int,
                     help='Batch size for training')
 parser.add_argument('--num_class', default=20, type=int,
                     help='Number of class used in model')
-parser.add_argument('--device', default=[0, 1], type=list,
+parser.add_argument('--device', default=[0, ], type=list,
                     help='Use CUDA to train model')
 parser.add_argument('--grad_accumulation_steps', default=1, type=int,
                     help='Number of gradient accumulation steps')
